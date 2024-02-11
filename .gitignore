@@ -1,3 +1,4 @@
 .env
+*/.env
 # remove node modules
 node_modules
