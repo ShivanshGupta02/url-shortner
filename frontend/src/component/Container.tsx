@@ -10,8 +10,6 @@ export type urlData = {
     fullUrl : string;
     shortUrl:string;
     clicks : number;
-    createdAt : Date;
-    updatedAt : Date;
 };
 
 const Container = () => {

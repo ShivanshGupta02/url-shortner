@@ -1,5 +1,5 @@
 import express from "express";
-import {urlModel} from "../model/shortUrl";
+import {urlModel} from "../model/model";
 
 export const createUrl = async(
     req : express.Request, 

@@ -1,5 +1,5 @@
 import express from "express";
-import {createUrl, getAllUrl, getUrl, deleteUrl } from "../controllers/shortUrl"
+import {createUrl, getAllUrl, getUrl, deleteUrl } from "../controllers/controller"
 const router = express.Router();
 
 router.post("/shortUrl", createUrl);

@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import {urlData} from "./Container";
 import { serverUrl } from "../helpers/Contants";
 import axios from "axios";
-import { useEffect, useState } from "react";
 
 type propsType={
     data : urlData[];
@@ -38,7 +37,7 @@ const DataTable = (props : propsType) => {
         return data.map((item:urlData)=>{
             return(
                 <tr key={item._id} className="border-b text-white bg-gray-600 hover:bg-white hover:text-gray-800">
-                    <td>
+                    <td className="px-6 py-3">
                         <Link 
                             to={item.fullUrl} 
                             target="_blank" 
@@ -47,7 +46,7 @@ const DataTable = (props : propsType) => {
                             {item.fullUrl}
                         </Link>
                     </td> 
-                    <td onClick={()=>updateReloadState()}>
+                    <td onClick={()=>updateReloadState()} className="px-6 py-3">
                         <Link 
                             to={`${serverUrl}/shortUrl/${item.shortUrl}`} 
                             target="_blank" 
